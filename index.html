@@ -1,12 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TESTE</title>
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <script src="https://kit.fontawesome.com/4f5c786c9e.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+
+
+    <div id="solar-system">
+
+        <section class="img-section">
+            <div id="planet-name">
+                <h3>Earth</h3>
+                <p>Planet</p>
+            </div>
+            <img src="./assets/images/earth.png" alt="earth img">
+
+            <div class="btn-section">
+                <button id="arrow-left"><i class="fa-solid fa-angle-left"></i></button>
+                <button id="arrow-right"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="info-box" id="avg-temp">
+                <h5>Avg. Temp.:</h5>
+                <div class="number-box">
+                    <p>58.7 °F</p>
+                </div>
+            </div>
+            <div class="info-box" id="gravity">
+                <h5>Gravity:</h5>
+                <div class="number-box">
+                    <p>9.8</p>
+                </div>
+            </div>
+            <div class="info-box" id="mass">
+                <h5>Mass:</h5>
+                <div class="number-box">
+                    <p>5.9 * 10^24</p>
+                </div>
+            </div>
+            <div class="info-box" id="density">
+                <h5>Density:</h5>
+                <div class="number-box">
+                    <p>5.5 g/cm³</p>
+                </div>
+            </div>
+            <div class="info-box" id="moon-count">
+                <h5>Moon Count:</h5>
+                <div class="number-box">
+                    <p>1</p>
+                </div>
+            </div>
+            <div class="info-box" id="discovery-date">
+                <h5>Discovery Date:</h5>
+                <div class="number-box">
+                    <p>Ever</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- <div id="gallery">
+        <input type="text" id="inSearch" placeholder="Pesquisar...">
+        <button type="submit" id="submit-btn">Enviar</button>
     
-    <script src="./assets/js/full-page.js"></script>
+        <div class="gallery-container">
+        </div>
+    </div> -->
+
+    <script src="./assets/js/api.js"></script>
+    <script type="module" src="./assets/js/gallery.js"></script>
+    <script type="module" src="./assets/js/solar-system.js"></script>
+    <script type="module" src="./assets/js/articles.js"></script>
+
 </body>
+
 </html>
