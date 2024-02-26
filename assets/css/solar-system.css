@@ -1,0 +1,48 @@
+#solar-system{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.planet-container{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.planet-container> .img-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.planet-container> .img-section> .title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.planet-container> .img-section> img{
+    height: 350px;
+}
+
+.planet-container> .info-section{
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 20px;
+}
+
+.planet-container> .info-section> .info-box> .value{
+    border: 2px solid black;
+    border-radius: 5px 30px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-angle-right,
+.fa-angle-left{
+    font-size: 30px;
+}

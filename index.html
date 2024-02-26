@@ -7,73 +7,73 @@
     <title>TESTE</title>
     <link rel="stylesheet" href="./assets/css/home.css">
     <script src="https://kit.fontawesome.com/4f5c786c9e.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./assets/images/logo.svg" type="image/svg">
 </head>
 
 <body>
-
-
     <div id="solar-system">
+        <div class="planet-container">
+              <section class="img-section">
+                <div class="title">
+                    <h3 id="planet-name"></h3>
+                    <p id="body-type"></p>
+                </div>
+                <img id="planet-img" src="./assets/images/earth.png" alt="earth img">
 
-        <section class="img-section">
-            <div id="planet-name">
-                <h3>Earth</h3>
-                <p>Planet</p>
-            </div>
-            <img src="./assets/images/earth.png" alt="earth img">
+                <div class="btn-section">
+                    <button id="arrow-left"><i class="fa-solid fa-angle-left"></i></button>
+                    <button id="arrow-right"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+            </section>
+            <section class="info-section">
+                <div class="info-box">
+                    <h5>Avg. Temp.:</h5>
+                    <div class="value">
+                        <p  id="avg-temp"></p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h5>Gravity:</h5>
+                    <div class="value">
+                        <p id="gravity"></p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h5>Mass:</h5>
+                    <div class="value">
+                        <p id="mass"></p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h5>Density:</h5>
+                    <div class="value">
+                        <p id="density"></p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h5>Moon Count:</h5>
+                    <div class="value">
+                        <p id="moon-count"></p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <h5>Discovery Date:</h5>
+                    <div class="value">
+                        <p id="discovery-date"></p>
+                    </div>
+                </div>
+            </section>      
+        </div>
 
-            <div class="btn-section">
-                <button id="arrow-left"><i class="fa-solid fa-angle-left"></i></button>
-                <button id="arrow-right"><i class="fa-solid fa-angle-right"></i></button>
-            </div>
-        </section>
-
-        <section class="info-section">
-            <div class="info-box" id="avg-temp">
-                <h5>Avg. Temp.:</h5>
-                <div class="number-box">
-                    <p>58.7 °F</p>
-                </div>
-            </div>
-            <div class="info-box" id="gravity">
-                <h5>Gravity:</h5>
-                <div class="number-box">
-                    <p>9.8</p>
-                </div>
-            </div>
-            <div class="info-box" id="mass">
-                <h5>Mass:</h5>
-                <div class="number-box">
-                    <p>5.9 * 10^24</p>
-                </div>
-            </div>
-            <div class="info-box" id="density">
-                <h5>Density:</h5>
-                <div class="number-box">
-                    <p>5.5 g/cm³</p>
-                </div>
-            </div>
-            <div class="info-box" id="moon-count">
-                <h5>Moon Count:</h5>
-                <div class="number-box">
-                    <p>1</p>
-                </div>
-            </div>
-            <div class="info-box" id="discovery-date">
-                <h5>Discovery Date:</h5>
-                <div class="number-box">
-                    <p>Ever</p>
-                </div>
-            </div>
-        </section>
     </div>
 
-    <!-- <div id="gallery">
+    <div id="gallery">
         <input type="text" id="inSearch" placeholder="Pesquisar...">
-        <button type="submit" id="submit-btn">Enviar</button>
+        <button type="submit" id="submit-btn">Pesquisar</button>
     
         <div class="gallery-container">
         </div>
-    </div> -->
+    </div>
 
     <script src="./assets/js/api.js"></script>
     <script type="module" src="./assets/js/gallery.js"></script>
