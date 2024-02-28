@@ -1,102 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TESTE</title>
-    <link rel="stylesheet" href="./assets/css/home.css">
-    <script src="https://kit.fontawesome.com/4f5c786c9e.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="./assets/images/logo.svg" type="image/svg">
+    <title>Spaceship Explorer | Lobby</title>
+    <link rel="stylesheet" href="./assets/css/form.css">
 </head>
-
 <body>
-    <div id="solar-system">
-        <div class="planet-container">
-            <section class="img-section">
-                <div class="title">
-                    <h3 id="planet-name"></h3>
-                    <p id="body-type"></p>
-                </div>
-                <img id="planet-img" src="./assets/images/earth.png" alt="earth img">
-
-                <div class="btn-section">
-                    <button id="arrow-left"><i class="fa-solid fa-angle-left"></i></button>
-                    <button id="arrow-right"><i class="fa-solid fa-angle-right"></i></button>
-                </div>
-            </section>
-            <section class="info-section">
-                <div class="info-box">
-                    <h5>Avg. Temp.:</h5>
-                    <div class="value">
-                        <p id="avg-temp"></p>
-                    </div>
-                </div>
-                <div class="info-box">
-                    <h5>Gravity:</h5>
-                    <div class="value">
-                        <p id="gravity"></p>
-                    </div>
-                </div>
-                <div class="info-box">
-                    <h5>Mass:</h5>
-                    <div class="value">
-                        <p id="mass"></p>
-                    </div>
-                </div>
-                <div class="info-box">
-                    <h5>Density:</h5>
-                    <div class="value">
-                        <p id="density"></p>
-                    </div>
-                </div>
-                <div class="info-box">
-                    <h5>Moon Count:</h5>
-                    <div class="value">
-                        <p id="moon-count"></p>
-                    </div>
-                </div>
-                <div class="info-box">
-                    <h5>Discovery Date:</h5>
-                    <div class="value">
-                        <p id="discovery-date"></p>
-                    </div>
-                </div>
-            </section>
+    <main class="main">
+        <img src="./assets/images/logo.svg" alt="Spaceship Explorer" class="logo">
+        <div class="login">
+            <form action="login">
+                <h2>Welcome back!</h2>
+                <label for="emailLogin">email</label>
+                <input type="email" id="emailLogin">
+                <label for="passwordLogin">password</label>
+                <input type="password" id="passLogin">
+                <button type="submit" id="btnLogin">Login</button>
+                <small>Already have an account? <a href="#">log in</a></small>
+            </form>
         </div>
-    </div>
-
-    <div id="gallery">
-        <input type="text" id="inSearchGallery" class="search" placeholder="Pesquisar imagem...">
-        <button type="submit" id="submitBtnGallery">Pesquisar</button>
-
-        <div class="gallery-container">
+        <div class="create-acc">
+            <form action="create-acc">
+                <h2>Nice to meet you!</h2>
+                <label for="userCreate">email</label>
+                <input type="text" id="userCreate">
+                <label for="emailCreate">email</label>
+                <input type="email" id="emailCreate">
+                <label for="passwordCreate">password</label>
+                <input type="password" id="passCreate">
+                <button type="submit" id="btnCreate">Create Account</button>
+                <small>Don't have an account? <a href="#">log in</a></small>
+                <small>Or log as a <a href="#">guest</a></small>
+            </form>
         </div>
-    </div>
-
-    <div id="space-news">
-        <input type="text" id="inSearchNews" class="search" placeholder="Pesquisar artigo...">
-        <button type="submit" id="submitBtnNews">Pesquisar</button>
-
-        <div class="news-container">
-            <div class="article-box">
-                <div class="img-section"></div>
-                <div class="info-section">
-                    <div class="title"></div>
-                    <div class="summary"></div>
-                    <div class="update"></div>
-                    <div class="author"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <script src="./assets/js/api.js"></script>
-    <script type="module" src="./assets/js/gallery.js"></script>
-    <script type="module" src="./assets/js/solar-system.js"></script>
-    <script type="module" src="./assets/js/articles.js"></script>
-
+    </main>
 </body>
-
 </html>
