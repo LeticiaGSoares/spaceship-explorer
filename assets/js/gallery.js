@@ -1,11 +1,11 @@
 import { get } from "./api.js";
 
+const galleryContainer = document.querySelector(`.gallery-container`)
+const submitBtn = document.getElementById('submitBtnGallery')
 let isGalleryOn = false
-const submitBtn = document.getElementById('submit-btn')
 
-submitBtn.addEventListener('click', () => {
-    const search = document.querySelector('#inSearch').value;
-    const loadGallery = get(`nasa-gallery`, `q=${search}&page_size=20`);
+function searchImage(keyword) {
+    const loadGallery = get(`nasa-gallery`, `q=${keyword}&page_size=20`);
 
     if (isGalleryOn) {
         const imagesOn = document.querySelectorAll('.gallery-image')
@@ -13,14 +13,12 @@ submitBtn.addEventListener('click', () => {
         imagesOn.forEach(image => {
             image.remove()
         })
-
     }
 
     loadGallery.then((data) => {
         data.collection.items.forEach(item => {
             const imgLink = item.links[0].href
             const box = document.createElement('div')
-
 
             box.innerHTML = `
                     <img src="${imgLink}" alt="">
@@ -34,20 +32,21 @@ submitBtn.addEventListener('click', () => {
 
             galleryContainer.appendChild(box)
         })
-
-        // data.collection.items.forEach(item => {
-        //     fetch(item.href)
-        //         .then((res) => { return res.json() })
-        //         .then((data) => {
-        //         })
-        //         .catch((error) => console.error('Searching Images Error! Code:', error));
-        // });
     })
         .catch((error) => console.error('Searching gallery error! Code:', error));
 
     isGalleryOn = true
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    searchImage("earth")
+})
+
+submitBtn.addEventListener('click', () => {
+    const search = document.querySelector('#inSearchGallery').value;
+    searchImage(search) 
 });
 
-const galleryContainer = document.querySelector(`.gallery-container`)
+
 
 

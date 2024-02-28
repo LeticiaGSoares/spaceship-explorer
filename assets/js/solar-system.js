@@ -24,11 +24,11 @@ const moonCount = document.querySelector('#moon-count')
 const discoveryDate = document.querySelector('#discovery-date')
 
 document.addEventListener('DOMContentLoaded', () =>{
-    const loadPlanet = get(`solar-system`, `${planetsQueue[2]}`)
+    const loadPlanet = get(`solar-system`, `${planetsQueue[1]}`)
     
     loadPlanet.then((data) =>{
-        console.log(data)
-        planetName.textContent = planetsQueue[2]
+        
+        planetName.textContent = planetsQueue[1]
         bodyType.textContent = data.bodyType
         avgTemp.textContent = `${data.avgTemp} K`
         gravity.textContent = data.gravity.toFixed(1)

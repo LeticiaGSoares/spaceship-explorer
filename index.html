@@ -13,7 +13,7 @@
 <body>
     <div id="solar-system">
         <div class="planet-container">
-              <section class="img-section">
+            <section class="img-section">
                 <div class="title">
                     <h3 id="planet-name"></h3>
                     <p id="body-type"></p>
@@ -29,7 +29,7 @@
                 <div class="info-box">
                     <h5>Avg. Temp.:</h5>
                     <div class="value">
-                        <p  id="avg-temp"></p>
+                        <p id="avg-temp"></p>
                     </div>
                 </div>
                 <div class="info-box">
@@ -62,18 +62,35 @@
                         <p id="discovery-date"></p>
                     </div>
                 </div>
-            </section>      
+            </section>
         </div>
-
     </div>
 
     <div id="gallery">
-        <input type="text" id="inSearch" placeholder="Pesquisar...">
-        <button type="submit" id="submit-btn">Pesquisar</button>
-    
+        <input type="text" id="inSearchGallery" class="search" placeholder="Pesquisar imagem...">
+        <button type="submit" id="submitBtnGallery">Pesquisar</button>
+
         <div class="gallery-container">
         </div>
     </div>
+
+    <div id="space-news">
+        <input type="text" id="inSearchNews" class="search" placeholder="Pesquisar artigo...">
+        <button type="submit" id="submitBtnNews">Pesquisar</button>
+
+        <div class="news-container">
+            <div class="article-box">
+                <div class="img-section"></div>
+                <div class="info-section">
+                    <div class="title"></div>
+                    <div class="summary"></div>
+                    <div class="update"></div>
+                    <div class="author"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="./assets/js/api.js"></script>
     <script type="module" src="./assets/js/gallery.js"></script>
