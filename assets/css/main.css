@@ -2,7 +2,10 @@
 
 :root{
     --White: #fff;
-    --DarkSlateBlue: #1C0635;
+    --Purple-900: #1C0635;
+    --Purple-900-opacity: rgba(28, 6, 53, 0.5);
+    --Purple-100: #9E85EA;
+    --Purple-100-opacity: rgba(158, 133, 234, 0.7);
 }
 
 * {
@@ -10,4 +13,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
+}
+
+html{
+    background-color: var(--Purple-900);
 }

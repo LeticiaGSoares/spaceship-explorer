@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,34 +8,37 @@
     <title>Spaceship Explorer | Lobby</title>
     <link rel="stylesheet" href="./assets/css/form.css">
 </head>
+
 <body>
+    <img src="./assets/images/logo.svg" alt="Spaceship Explorer" class="logo">
     <main class="main">
-        <img src="./assets/images/logo.svg" alt="Spaceship Explorer" class="logo">
-        <div class="login">
-            <form action="login">
+        <div id="login">
+            <form>
                 <h2>Welcome back!</h2>
                 <label for="emailLogin">email</label>
-                <input type="email" id="emailLogin">
+                <input type="name" id="emailLogin">
                 <label for="passwordLogin">password</label>
                 <input type="password" id="passLogin">
                 <button type="submit" id="btnLogin">Login</button>
-                <small>Already have an account? <a href="#">log in</a></small>
+                <small>Don't have an account? <a href="#create-acc">create account</a></small>
+                <small>Or log as a <a href="./pages/home.html">guest</a></small>
             </form>
         </div>
-        <div class="create-acc">
-            <form action="create-acc">
+        <div id="create-acc">
+            <form>
                 <h2>Nice to meet you!</h2>
-                <label for="userCreate">email</label>
-                <input type="text" id="userCreate">
                 <label for="emailCreate">email</label>
                 <input type="email" id="emailCreate">
                 <label for="passwordCreate">password</label>
                 <input type="password" id="passCreate">
-                <button type="submit" id="btnCreate">Create Account</button>
-                <small>Don't have an account? <a href="#">log in</a></small>
-                <small>Or log as a <a href="#">guest</a></small>
+                <button type="submit" id="btnCreateAcc">Create Account</button>
+                <small>Already have an account? <a href="#login">log in</a></small>
+                <small>Or log as a <a href="./pages/home.html">guest</a></small>
             </form>
         </div>
     </main>
+
+    <script src="./assets/js/form.js"></script>
 </body>
+
 </html>
