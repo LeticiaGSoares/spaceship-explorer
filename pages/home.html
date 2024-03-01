@@ -11,18 +11,42 @@
 </head>
 
 <body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#hero"><img src="../assets/images/logo.svg" alt="Spaceship Explorer" class="logo"></a>
+            
+            <ul>
+                <li>
+                    <a class="nav-link" href="#solar-system">Solar system</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#gallery">Gallery</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#space-news">Space news</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="hero">
+        <h1 class="big-title">EXPLORE SPACE</h1>
+        <img class="big-planet" src="../assets/images/hero-planet.png" alt="Just a huge planet">
+    </main>
+
     <div id="solar-system">
         <div class="planet-container">
             <section class="img-section">
                 <div class="title">
                     <h3 id="planet-name"></h3>
-                    <p id="body-type"></p>
+                    <h4 id="body-type"></h4>
                 </div>
-                <img id="planet-img" src="../assets/images/earth.png" alt="earth img">
+
+                <img id="planet-img" src="../assets/images/earth.png" alt="">
 
                 <div class="btn-section">
-                    <button id="arrow-left"><i class="fa-solid fa-angle-left"></i></button>
-                    <button id="arrow-right"><i class="fa-solid fa-angle-right"></i></button>
+                    <button id="previous-planet"><i class="fa-solid fa-angle-left"></i></button>
+                    <button id="next-planet"><i class="fa-solid fa-angle-right"></i></button>
                 </div>
             </section>
             <section class="info-section">
@@ -66,36 +90,31 @@
         </div>
     </div>
 
+    <div id="space-news">
+        <input type="text" id="inSearchNews" class="search" placeholder="Pesquisar artigo...">
+        <button type="submit" id="submitBtnNews">Pesquisar</button>
+
+        <div class="news-container">
+        </div>
+
+        <button id="moreNews">Ver Mais</button>
+    </div>
+
     <div id="gallery">
         <input type="text" id="inSearchGallery" class="search" placeholder="Pesquisar imagem...">
         <button type="submit" id="submitBtnGallery">Pesquisar</button>
 
         <div class="gallery-container">
         </div>
-    </div>
 
-    <div id="space-news">
-        <input type="text" id="inSearchNews" class="search" placeholder="Pesquisar artigo...">
-        <button type="submit" id="submitBtnNews">Pesquisar</button>
-
-        <div class="news-container">
-            <div class="article-box">
-                <div class="img-section"></div>
-                <div class="info-section">
-                    <div class="title"></div>
-                    <div class="summary"></div>
-                    <div class="update"></div>
-                    <div class="author"></div>
-                </div>
-            </div>
-        </div>
+        <button id="moreImages">Ver Mais</button>
     </div>
 
 
     <script src="../assets/js/api.js"></script>
-    <script type="module" src="../assets/js/gallery.js"></script>
     <script type="module" src="../assets/js/solar-system.js"></script>
-    <script type="module" src="../assets/js/articles.js"></script>
+    <script type="module" src="../assets/js/space-news.js"></script>
+    <script type="module" src="../assets/js/gallery.js"></script>
 
 </body>
 

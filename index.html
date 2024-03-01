@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <img src="./assets/images/logo.svg" alt="Spaceship Explorer" class="logo">
     <main class="main">
         <div id="login">
@@ -20,8 +21,11 @@
                 <label for="passwordLogin">password</label>
                 <input type="password" id="passLogin">
                 <button type="submit" id="btnLogin">Login</button>
-                <small>Don't have an account? <a href="#create-acc">create account</a></small>
-                <small>Or log as a <a href="./pages/home.html">guest</a></small>
+                <div class="form-links">
+                    <small>Don't have an account? <a href="#create-acc">sign up</a></small>
+                    <small>Or log as a <a href="./pages/home.html">guest</a></small>
+                </div>
+                
             </form>
         </div>
         <div id="create-acc">
@@ -32,8 +36,10 @@
                 <label for="passwordCreate">password</label>
                 <input type="password" id="passCreate">
                 <button type="submit" id="btnCreateAcc">Create Account</button>
-                <small>Already have an account? <a href="#login">log in</a></small>
+                <div class="form-links">
+                    <small>Already have an account? <a href="#login">log in</a></small>
                 <small>Or log as a <a href="./pages/home.html">guest</a></small>
+                </div>
             </form>
         </div>
     </main>

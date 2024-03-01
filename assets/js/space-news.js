@@ -1,6 +1,5 @@
 import { get } from "./api.js";
-
-const spaceNews = document.querySelector('#space-news')
+const spaceNews = document.querySelector('.news-container')
 const submitBtnNews = document.querySelector('#submitBtnNews')
 let isArticleOn = false
 

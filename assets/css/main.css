@@ -6,6 +6,8 @@
     --Purple-900-opacity: rgba(28, 6, 53, 0.5);
     --Purple-100: #9E85EA;
     --Purple-100-opacity: rgba(158, 133, 234, 0.7);
+    --Purple-500: #53418B;
+    --Purple-500-opacity: rgb(83, 65, 139, 0.5);
 }
 
 * {
@@ -13,8 +15,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 html{
     background-color: var(--Purple-900);
+}
+
+body{
+    font-size: 16px;
 }

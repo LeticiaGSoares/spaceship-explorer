@@ -1,48 +1,100 @@
-#solar-system{
+#solar-system {
     display: flex;
     justify-content: space-evenly;
+    background: linear-gradient(transparent 0%, var(--Purple-900-opacity) 20%, var(--Purple-900) 50%);
+    min-height: 100vh;
+    color: var(--Purple-100)
 }
 
-.planet-container{
+.planet-container {
     display: flex;
-    gap: 20px;
+    gap: 60px;
+    justify-content: center;
     align-items: center;
 }
 
-.planet-container> .img-section{
+.planet-container>.img-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 10px;
+    height: 400px;
 }
 
-.planet-container> .img-section> .title{
+.planet-container>.img-section>.title {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
-.planet-container> .img-section> img{
-    height: 350px;
+.title>h3 {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: var(--White);
 }
 
-.planet-container> .info-section{
+
+.planet-container>.img-section>img {
+    width: 300px;
+}
+
+.planet-container>.info-section {
     width: 500px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    column-gap: 20px;
+    column-gap: 30px;
 }
 
-.planet-container> .info-section> .info-box> .value{
-    border: 2px solid black;
+.planet-container>.info-section>.info-box>.value {
+    border: 2px solid var(--Purple-100);
     border-radius: 5px 30px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--Purple-500-opacity);
+    box-shadow: 0 0 25px 0 var(--Purple-500-opacity);
+    min-height: 60px;
+    margin-bottom: 20px;
+}
+
+.value>p {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--White);
+}
+
+.measure {
+    margin-left: 5px;
+    color: var(--Purple-100);
+}
+
+.exponent {
+    font-size: 10px;
+    position: relative;
+    bottom: 7px;
+}
+
+.measure {
+    font-size: 15px;
 }
 
 .fa-angle-right,
-.fa-angle-left{
+.fa-angle-left {
+    width: 50px;
     font-size: 30px;
+    color: var(--White);
+}
+
+.fa-angle-right:hover,
+.fa-angle-left:hover {
+    color: var(--Purple-100)
+}
+
+#previous-planet,
+#next-planet {
+    background: none;
+    border: none;
+    cursor: pointer;
 }

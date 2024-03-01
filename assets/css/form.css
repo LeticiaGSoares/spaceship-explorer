@@ -1,13 +1,13 @@
 @import url(./main.css);
 
-.logo{
+.logo {
     height: 30px;
     position: absolute;
     top: 20px;
     left: 20px;
 }
 
-body{
+body {
     background: url(../images/hero-bg.png);
     height: 100vh;
     display: flex;
@@ -15,7 +15,7 @@ body{
     align-items: center;
 }
 
-.main{
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,20 +26,19 @@ body{
     border: 2px solid var(--Purple-100);
     color: var(--Purple-900);
     overflow: hidden;
-    box-shadow: 0px 0px 45px 0px var(--Purple-100-opacity);
+    box-shadow: 0 0 45px 0 var(--Purple-100-opacity);
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     max-width: 300px;
     height: 500px;
     justify-content: center;
-    align-items: center;
     gap: 10px;
 }
 
-button{
+button {
     padding: 15px;
     background: var(--Purple-900);
     color: var(--White);
@@ -50,10 +49,9 @@ button{
     font-weight: 700;
     width: 100%;
     cursor: pointer;
-    box-shadow: ;
 }
 
-input{
+input {
     border: none;
     background: transparent;
     border-bottom: 2px solid var(--Purple-900);
@@ -61,12 +59,19 @@ input{
     padding: 5px;
 }
 
-label{
+label {
     align-self: flex-start;
     color: var(--Purple-900-opacity);
 }
 
-a{
+a {
     font-weight: 700;
     color: var(--Purple-900);
+}
+
+.form-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
