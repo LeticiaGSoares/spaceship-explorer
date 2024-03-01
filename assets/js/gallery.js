@@ -5,7 +5,7 @@ const submitBtn = document.getElementById('submitBtnGallery')
 let isGalleryOn = false
 
 function searchImage(keyword) {
-    const loadGallery = get(`nasa-gallery`, `q=${keyword}&page_size=20`);
+    const loadGallery = get(`nasa-gallery`, `q=${keyword}&page_size=15`);
 
     if (isGalleryOn) {
         const imagesOn = document.querySelectorAll('.gallery-image')

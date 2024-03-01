@@ -1,7 +1,16 @@
+#gallery{
+    background-color: var(--Purple-500-opacity);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
 .gallery-container {
     margin: 10px auto;
     columns: 4;
     column-gap: 10px;
+    width: 80%;
 }
 
 .gallery-image {

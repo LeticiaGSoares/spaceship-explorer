@@ -3,10 +3,6 @@
 @import url('./gallery.css');
 @import url('./solar-system.css');
 
-body {
-    background: no-repeat url('../images/hero-bg.png');
-}
-
 .header {
     position: fixed;
     width: 100%;

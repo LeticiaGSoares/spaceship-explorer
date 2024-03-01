@@ -4,6 +4,7 @@ const btnCreateAcc = document.querySelector('#btnCreateAcc')
 let accounts = []
 
 btnLogin.addEventListener('click', () => {
+    debugger
     let email = document.querySelector('#emailLogin').value
     let password = document.querySelector('#passLogin').value
 
@@ -15,11 +16,10 @@ btnLogin.addEventListener('click', () => {
                 found = true
             }
         })
+        window.location.href= '../../pages/home.html'
 
-        if (found) {
-            window.location.href= '../../pages/home.html'
-        } else {
-            alert('Conta não existe ou erro de digitação. Tente novamente.')
+        if (!found) {
+            alert('Account does not exist or typing error. Try again.')
         }
     }
 })
@@ -37,7 +37,7 @@ btnCreateAcc.addEventListener('click', () => {
 
         accounts.push(newAccount)
 
-        alert('Sua conta foi criada com sucesso! (Teste logar com os dados preenchidos)')
+        alert('Your account has been created successfully!')
     }
 
     console.log(accounts)
@@ -48,11 +48,11 @@ function formValidation(email, password) {
     const emailPattern = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)
 
     if (email == "" || password == "") {
-        alert('Os campos não podem estar vazios')
+        alert('Fields cannot be empty')
     } else if (password.length <= 5 || password.length > 10) {
-        alert("Sua senha deve conter um mínimo de 6 caracteres e 10 no máximo")
+        alert("Your password must contain a minimum of 6 characters and a maximum of 10")
     } else if (!emailPattern.test(email)) {
-        alert('Insira um email válido')
+        alert('Enter a valid email')
     } else {
         isValid = true
     }
