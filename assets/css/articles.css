@@ -1,0 +1,28 @@
+#space-news {
+    min-height: 80vh;
+    background-color: var(--Purple-500-opacity);
+    padding: 0 50px;
+}
+
+.article-box {
+    border-radius: 5px 30px;
+    max-width: 700px;
+    max-height: 400px;
+    display: flex;
+    color: var(--Purple-100);
+    background-color: var(--Purple-500-opacity);
+    border: 2px solid var(--Purple-100);
+    padding: 10px;
+}
+
+.article-box>.img-section {
+    width: 350px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 5px 30px;
+}
+
+.article-box>.info-section>.title,
+.white {
+    color: var(--White)
+}

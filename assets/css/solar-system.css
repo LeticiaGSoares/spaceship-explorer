@@ -1,7 +1,7 @@
 #solar-system {
     display: flex;
     justify-content: space-evenly;
-    background: linear-gradient(transparent 0%, var(--Purple-900-opacity) 20%, var(--Purple-900) 50%);
+    background: linear-gradient(transparent 0%, var(--Purple-900-opacity) 20%, var(--Purple-900) 85%, var(--Purple-500-opacity) 100%);
     min-height: 100vh;
     color: var(--Purple-100)
 }
@@ -68,16 +68,13 @@
 .measure {
     margin-left: 5px;
     color: var(--Purple-100);
+    font-size: 15px;
 }
 
 .exponent {
     font-size: 10px;
     position: relative;
     bottom: 7px;
-}
-
-.measure {
-    font-size: 15px;
 }
 
 .fa-angle-right,

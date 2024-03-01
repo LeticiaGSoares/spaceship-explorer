@@ -7,9 +7,9 @@ function searchArticle(keyword) {
     const loadArticles = get(`space-news`, `?limit=3&${keyword}`)
     console.log(isArticleOn)
 
-    if(isArticleOn){
+    if (isArticleOn) {
         const articlesOn = document.querySelectorAll('.article-box')
-        articlesOn.forEach((article) => {article.remove()})
+        articlesOn.forEach((article) => { article.remove() })
     }
 
     loadArticles.then((data) => {
@@ -22,8 +22,8 @@ function searchArticle(keyword) {
                 <div class="info-section">
                     <div class="title">${data.title}</div>
                     <div class="summary">${data.summary}</div>
-                    <div class="update">${data.updated_at}</div>
-                    <div class="author">${data.news_site}</div>
+                    <div class="update"><span class="white">Updated: </span>${data.updated_at}</div>
+                    <div class="author"><span class="white">By: </span>${data.news_site}</div>
                 </div>
             `
             spaceNews.appendChild(articleBox)

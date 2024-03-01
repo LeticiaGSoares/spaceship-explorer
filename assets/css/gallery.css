@@ -27,7 +27,7 @@
 
 .fa-eye {
     font-size: 30px;
-    color: black;
+    color: var(--White);
 }
 
 .gallery-image:hover>a {
@@ -36,7 +36,7 @@
 }
 
 .gallery-image:hover>img {
-    opacity: .5;
+    opacity: .6;
 }
 
 @media (max-width: 800px) {

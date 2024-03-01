@@ -16,6 +16,8 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 30px 60px;
+    background: linear-gradient(var(--Purple-900) 0%, transparent 100%);
+    z-index: 99;
 }
 
 .logo {
@@ -35,7 +37,7 @@ body {
 
 #hero {
     text-align: center;
-    max-height: 100vh;
+    max-height: 80vh;
 }
 
 .big-title {
@@ -45,6 +47,7 @@ body {
     margin: 0 60px;
     color: var(--White);
     animation: changeLetterSpacing 10s ease-in-out infinite;
+    z-index: -1;
 }
 
 .big-planet {
