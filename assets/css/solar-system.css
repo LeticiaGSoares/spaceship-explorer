@@ -1,10 +1,13 @@
 #solar-system {
     display: flex;
     justify-content: space-evenly;
-    background: linear-gradient(transparent 0%, var(--Purple-900-opacity) 20%, var(--Purple-900) 85%, var(--Purple-500-opacity) 100%);
+    background: linear-gradient(var(--Purple-900-opacity) 0%, var(--Purple-500-opacity) 100%);
+    backdrop-filter: blur(10px);
     min-height: 100vh;
     color: var(--Purple-100);
     padding-bottom: 50px;
+    z-index: 0;
+    position: relative;
 }
 
 .planet-container {
@@ -105,7 +108,16 @@
 
 @media(max-width: 630px) {
     .planet-container>.info-section {
-        grid-template-columns: repeat(2, minmax(130px, 40%));
+        grid-template-columns: repeat(2, 140px);
         justify-content: center;
+        width: 100%;
+    }
+
+    .value>p {
+        font-size: 15px;
+    }
+
+    .planet-container>.img-section>img {
+        width: 250px;
     }
 }

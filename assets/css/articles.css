@@ -83,8 +83,22 @@
     }
 }
 
-@media (max-width: 645px){
+@media (max-width: 660px){
+    .news-container {
+        margin-bottom: 80px;
+    }
+
     .article-box>.info-section{
         font-size: 13px;
+    }
+
+    .article-box {
+        flex-direction: column-reverse;
+        height: 450px;
+    }
+
+    .article-box>.img-section {
+        height:450px;
+        width: 100%;
     }
 }

@@ -23,7 +23,5 @@ html{
 }
 
 body{
-    background: no-repeat url('../images/hero-bg.png');
-    background-size: cover;
     font-size: 16px;
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TESTE</title>
+    <title>Home | Spaceship Explorer</title>
     <link rel="stylesheet" href="../assets/css/home.css">
     <script src="https://kit.fontawesome.com/4f5c786c9e.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../assets/images/logo.svg" type="image/svg">
@@ -15,10 +15,8 @@
         <nav class="navbar">
             <a href="#hero"><img src="../assets/images/logo.svg" alt="Spaceship Explorer" class="logo"></a>
 
-            <a href="#" class="mobile">
-                <i class="fa-solid fa-bars"></i>
-            </a>
-            <ul>
+            <i id="mobile" class="fa-solid fa-bars"></i>
+            <ul class="links-bar">
                 <li>
                     <a class="nav-link" href="#solar-system">Solar system</a>
                 </li>
@@ -31,6 +29,19 @@
                 <li>
                     <a class="nav-link" href="../index.html"><i class="fa-solid fa-right-from-bracket"></i></a>
                 </li>
+
+                <div class="social-links">
+                    <a href="https://github.com/GabigoldoSenai/astronomy-website" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/let%C3%ADcia-g-soares-48173a28b/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.behance.net/letciagsoares" target="_blank">
+                        <i class="fa-brands fa-behance"></i>
+                    </a>
+                </div>
+
             </ul>
         </nav>
     </header>
@@ -98,6 +109,7 @@
 
     <div id="space-news">
         <div class="search-area">
+
             <input type="text" autocomplete="off" id="inSearchNews" class="search" placeholder="Search article...">
             <button type="submit" id="submitBtnNews">Search</button>
         </div>
@@ -105,7 +117,7 @@
         <div class="news-container">
         </div>
 
-        <button class="more" id="moreNews">See more</button>
+        <button type="button" class="more" id="moreNews">Open News</button>
     </div>
 
     <div id="gallery">
@@ -117,7 +129,7 @@
         <div class="gallery-container">
         </div>
 
-        <button class="more" id="moreImages">See more</button>
+        <button  type="button" class="more" id="moreImages">Open Gallery</button>
     </div>
 
     <footer class="footer">
@@ -137,6 +149,7 @@
     </footer>
 
     <script src="../assets/js/api.js"></script>
+    <script src="../assets/js/navbar.js"></script>
     <script type="module" src="../assets/js/solar-system.js"></script>
     <script type="module" src="../assets/js/space-news.js"></script>
     <script type="module" src="../assets/js/gallery.js"></script>

@@ -4,8 +4,8 @@ const galleryContainer = document.querySelector(`.gallery-container`)
 const submitBtn = document.getElementById('submitBtnGallery')
 let isGalleryOn = false
 
-function searchImage(keyword) {
-    const loadGallery = get(`nasa-gallery`, `q=${keyword}&page_size=15`);
+function searchImage(keyword, limit) {
+    const loadGallery = get(`nasa-gallery`, `q=${keyword}&page_size=${limit}`);
 
     if (isGalleryOn) {
         const imagesOn = document.querySelectorAll('.gallery-image')
@@ -39,14 +39,29 @@ function searchImage(keyword) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    searchImage("earth")
-})
-
-submitBtn.addEventListener('click', () => {
-    const search = document.querySelector('#inSearchGallery').value;
-    searchImage(search) 
+    if (document.location.pathname.includes("home.html")) {
+        searchImage("earth", 8);
+    }else{
+        searchImage("",25)
+    }
 });
 
 
+submitBtn.addEventListener('click', () => {
+    const search = document.querySelector('#inSearchGallery').value;
+    
+    if (document.location.pathname.includes("home.html")) {
+        searchImage(search, 8)
+    }else{
+        searchImage(search, 35)
+    } 
+});
+
+
+const moreImages = document.querySelector('#moreImages')
+
+moreImages.addEventListener("click", () => {
+    window.location.href= "../../pages/gallery.html"
+})
 
 

@@ -39,8 +39,8 @@ function createArticleBox(data) {
 }
 
 
-function searchArticle(keyword) {
-    const loadArticles = get(`space-news`, `?limit=3&${keyword}`);
+function searchArticle(keyword, limit) {
+    const loadArticles = get(`space-news`, `?limit=${limit}&${keyword}`);
     console.log(isArticleOn);
 
     if (isArticleOn) {
@@ -57,10 +57,26 @@ function searchArticle(keyword) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    searchArticle("");
+    if (document.location.pathname.includes("home.html")) {
+        searchArticle("", 3);
+    }else{
+        searchArticle("", 15)
+    }
 });
 
 submitBtnNews.addEventListener('click', () => {
     const inSearchNews = document.querySelector('#inSearchNews').value;
-    searchArticle("search=" + inSearchNews);
+    
+    if (document.location.pathname.includes("home.html")) {
+        searchArticle("search=" + inSearchNews, 3);
+    }else{
+        searchArticle("search=" + inSearchNews, 15)
+    }
 });
+
+const moreNews = document.querySelector('#moreNews')
+
+moreNews.addEventListener('click', () => {
+    window.location.href = '../../pages/news.html'
+})
+
