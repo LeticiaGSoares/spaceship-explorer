@@ -61,7 +61,7 @@ submitBtn.addEventListener('click', () => {
 const moreImages = document.querySelector('#moreImages')
 
 moreImages.addEventListener("click", () => {
-    window.location.href= "../../pages/gallery.html"
+    window.location.href= "./gallery.html"
 })
 
 

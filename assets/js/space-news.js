@@ -77,6 +77,6 @@ submitBtnNews.addEventListener('click', () => {
 const moreNews = document.querySelector('#moreNews')
 
 moreNews.addEventListener('click', () => {
-    window.location.href = '../../pages/news.html'
+    window.location.href = './news.html'
 })
 
