@@ -3,7 +3,8 @@
     justify-content: space-evenly;
     background: linear-gradient(transparent 0%, var(--Purple-900-opacity) 20%, var(--Purple-900) 85%, var(--Purple-500-opacity) 100%);
     min-height: 100vh;
-    color: var(--Purple-100)
+    color: var(--Purple-100);
+    padding-bottom: 50px;
 }
 
 .planet-container {
@@ -94,4 +95,17 @@
     background: none;
     border: none;
     cursor: pointer;
+}
+
+@media(max-width:950px) {
+    .planet-container {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 630px) {
+    .planet-container>.info-section {
+        grid-template-columns: repeat(2, minmax(130px, 40%));
+        justify-content: center;
+    }
 }

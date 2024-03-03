@@ -14,16 +14,22 @@
     <header class="header">
         <nav class="navbar">
             <a href="#hero"><img src="../assets/images/logo.svg" alt="Spaceship Explorer" class="logo"></a>
-            
+
+            <a href="#" class="mobile">
+                <i class="fa-solid fa-bars"></i>
+            </a>
             <ul>
                 <li>
                     <a class="nav-link" href="#solar-system">Solar system</a>
                 </li>
                 <li>
+                    <a class="nav-link" href="#space-news">Space news</a>
+                </li>
+                <li>
                     <a class="nav-link" href="#gallery">Gallery</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#space-news">Space news</a>
+                    <a class="nav-link" href="../index.html"><i class="fa-solid fa-right-from-bracket"></i></a>
                 </li>
             </ul>
         </nav>
@@ -92,14 +98,14 @@
 
     <div id="space-news">
         <div class="search-area">
-        <input type="text" autocomplete="off" id="inSearchNews" class="search" placeholder="Search article...">
-        <button type="submit" id="submitBtnNews">Search</button>
+            <input type="text" autocomplete="off" id="inSearchNews" class="search" placeholder="Search article...">
+            <button type="submit" id="submitBtnNews">Search</button>
         </div>
 
         <div class="news-container">
         </div>
 
-        <button id="moreNews">See more</button>
+        <button class="more" id="moreNews">See more</button>
     </div>
 
     <div id="gallery">
@@ -111,9 +117,24 @@
         <div class="gallery-container">
         </div>
 
-        <button id="moreImages">See more</button>
+        <button class="more" id="moreImages">See more</button>
     </div>
 
+    <footer class="footer">
+        <p>Made with <3 by @GabigoldoSenai</p>
+                <div class="social-links">
+                    <a href="https://github.com/GabigoldoSenai/astronomy-website" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/let%C3%ADcia-g-soares-48173a28b/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.behance.net/letciagsoares" target="_blank">
+                        <i class="fa-brands fa-behance"></i>
+                    </a>
+                </div>
+
+    </footer>
 
     <script src="../assets/js/api.js"></script>
     <script type="module" src="../assets/js/solar-system.js"></script>

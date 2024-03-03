@@ -16,10 +16,11 @@ btnLogin.addEventListener('click', () => {
                 found = true
             }
         })
-        window.location.href= '../../pages/home.html'
 
         if (!found) {
             alert('Account does not exist or typing error. Try again.')
+        }else{
+            window.location.href= '../../pages/home.html'
         }
     }
 })

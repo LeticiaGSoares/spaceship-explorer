@@ -16,8 +16,15 @@
     z-index: 99;
 }
 
+.mobile {
+    display: none;
+    color: var(--White);
+    font-size: 30px;
+    text-decoration: none;
+}
+
 .logo {
-    height: 40px;
+    height: 30px;
 }
 
 .navbar>ul {
@@ -33,7 +40,7 @@
 
 #hero {
     text-align: center;
-    max-height: 80vh;
+    max-height: 100vh;
 }
 
 .big-title {
@@ -53,6 +60,57 @@
     margin-top: 55px;
 }
 
+
+.more {
+    width: 50%;
+    background-color: var(--Purple-500-opacity);
+    padding: 10px 30px;
+    border: 2px solid var(--Purple-100);
+    border-radius: 5px 10px;
+    color: var(--Purple-100);
+    transition: box-shadow ease-in-out .2s;
+}
+
+.more:hover {
+    background-color: var(--Purple-100-opacity);
+    cursor: pointer;
+    color: var(--Purple-900);
+    box-shadow: 0 0 25px 0 var(--Purple-100-opacity);
+}
+
+.footer {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+    background-color: var(--Purple-900);
+    color: var(--White);
+}
+
+.social-links {
+    width: 100%;
+    text-align: center;
+}
+
+.social-links>a {
+    text-decoration: none;
+}
+
+.social-links>a>i {
+    font-size: 35px;
+    color: var(--White);
+    text-decoration: none;
+    padding: 0 10px;
+    transition: transform ease-in-out .3s;
+}
+
+.social-links>a:hover>i {
+    color: var(--Purple-100);
+    transform: scale(1.2);
+}
+
 @keyframes changeLetterSpacing {
     0% {
         letter-spacing: 5px;
@@ -65,4 +123,76 @@
     100% {
         letter-spacing: 5px;
     }
+}
+
+.search-area {
+    display: flex;
+    gap: 20px;
+}
+
+.search-area>input,
+.search-area>button {
+    font-size: 20px;
+}
+
+.search-area>input {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    color: var(--White);
+}
+
+.search-area>input::placeholder {
+    color: var(--Purple-100-opacity)
+}
+
+.search-area>button {
+    padding: 5px 30px;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--Purple-100);
+    color: var(--Purple-900);
+    cursor: pointer;
+}
+
+.search-area>button:hover {
+    background-color: var(--Purple-100-opacity);
+    color: var(--White);
+}
+
+@media (max-width: 990px) {
+    .big-title {
+        animation: none;
+    }
+}
+
+@media (max-width: 750px) {
+    #hero {
+        max-height: 60vh;
+    }
+
+    .mobile {
+        display: inherit;
+    }
+
+    .navbar>ul {
+        display: none;
+    }
+
+    .big-title {
+        line-height: 60px;
+        font-size: 50px;
+        letter-spacing: 10px;
+    }
+
+    .big-planet {
+        margin-top: 80px;
+    }
+}
+
+@media(max-width: 500px) {
+    .big-title {
+        font-size: 40px;
+    }
+
 }

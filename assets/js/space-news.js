@@ -6,7 +6,7 @@ let isArticleOn = false
 
 function truncateText(text, maxLength) {
     if (text.length > maxLength) {
-        return text.substring(0, maxLength) + '[...]';
+        return text.substring(0, maxLength) + '...';
     } else {
         return text;
     }
@@ -18,7 +18,7 @@ function createArticleBox(data) {
     const imgSection = document.createElement('div');
     imgSection.classList.add('img-section');
 
-    const summaryText = truncateText(data.summary, 160); 
+    const summaryText = truncateText(data.summary, 160);
 
     articleBox.innerHTML = `
         <div class="info-section" onclick="window.open('${data.url}', '_blank')">
@@ -27,7 +27,6 @@ function createArticleBox(data) {
                 <div class="summary">${summaryText}</div>
             </div>
             <div class="details">
-                <div class="update"><span class="white">Updated: </span>${data.updated_at}</div>
                 <div class="author"><span class="white">By: </span>${data.news_site}</div>
             </div>
         </div>
@@ -41,7 +40,7 @@ function createArticleBox(data) {
 
 
 function searchArticle(keyword) {
-    const loadArticles = get(`space-news`, `?limit=6&${keyword}`);
+    const loadArticles = get(`space-news`, `?limit=3&${keyword}`);
     console.log(isArticleOn);
 
     if (isArticleOn) {

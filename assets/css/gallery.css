@@ -1,9 +1,10 @@
-#gallery{
+#gallery {
     background-color: var(--Purple-500-opacity);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
+    padding-bottom: 50px;
 }
 
 .gallery-container {
@@ -48,13 +49,13 @@
     opacity: .6;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .gallery-container {
         columns: 3;
     }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 700px) {
     .gallery-container {
         columns: 2;
     }

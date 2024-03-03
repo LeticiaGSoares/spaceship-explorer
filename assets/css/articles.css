@@ -5,53 +5,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
+    padding-bottom: 50px;
 }
 
-.news-container{
+.news-container {
     width: 80%;
     display: grid;
-    row-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-}
-
-.search-area{
-    display: flex;
-    gap: 20px;
-}
-
-.search-area> input,
-.search-area> button{
-    font-size: 20px;
-}
-
-.search-area> input{
-    outline: none;
-    background-color: transparent;
-    border: none;
-    color: var(--White);
-}
-.search-area> input::placeholder{
-    color: var(--Purple-100-opacity)
-}
-
-.search-area> button{
-    padding: 5px 30px;
-    border-radius: 30px;
-    border: none;
-    background-color: var(--Purple-100);
-    color: var(--Purple-900);
-    cursor: pointer;
-}
-
-.search-area> button:hover{
-    background-color: var(--Purple-100-opacity);
-    color: var(--White);
+    row-gap: 3%;
+    column-gap: 3%;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .article-box {
     border-radius: 5px 30px;
-    width: 340px;
     height: 500px;
     display: flex;
     color: var(--Purple-100);
@@ -71,7 +38,7 @@
     border-radius: 5px 30px;
 }
 
-.article-box>.info-section{
+.article-box>.info-section {
     width: 90%;
     height: 50%;
     text-align: justify;
@@ -80,6 +47,11 @@
     justify-content: space-between;
     gap: 5px;
     cursor: pointer;
+    font-size: 13px;
+}
+
+.article-box:hover {
+    background-color: var(--Purple-500);
 }
 
 .article-box>.info-section>.content>.title,
@@ -87,16 +59,32 @@
     color: var(--White)
 }
 
+@media(max-width: 1100px) {
 
-.summary,
-.update,
-.author{
-    font-size: 13px;
+    .news-container {
+        grid-template-columns: 100%;
+        margin-bottom: 50px;
+    }
+
+    .article-box {
+        flex-direction: row-reverse;
+        height: 270px;
+        align-items: flex-start;
+    }
+
+    .article-box>.img-section {
+        height: 245px;
+        width: 300px;
+    }
+
+    .article-box>.info-section {
+        padding: 10px 15px;
+        height: 100%;
+    }
 }
 
-
-
-#moreNews{
-    background-color: transparent;
-    border: none;
+@media (max-width: 645px){
+    .article-box>.info-section{
+        font-size: 13px;
+    }
 }
