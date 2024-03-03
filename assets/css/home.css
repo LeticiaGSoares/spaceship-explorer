@@ -52,7 +52,6 @@
 #hero {
     text-align: center;
     max-height: 100vh;
-    background: linear-gradient(to bottom, transparent, var(--Purple-900-opacity)), no-repeat url('../images/hero-bg.png');
     background-size: cover;
 }
 
