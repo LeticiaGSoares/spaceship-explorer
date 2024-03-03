@@ -41,27 +41,28 @@ function searchImage(keyword, limit) {
 document.addEventListener('DOMContentLoaded', () => {
     if (document.location.pathname.includes("home.html")) {
         searchImage("earth", 8);
-    }else{
-        searchImage("",25)
+        const moreImages = document.querySelector('#moreImages')
+
+        moreImages.addEventListener("click", () => {
+            window.location.href = "./gallery.html"
+        })
+    } else {
+        searchImage("", 25)
     }
 });
 
 
 submitBtn.addEventListener('click', () => {
     const search = document.querySelector('#inSearchGallery').value;
-    
+
     if (document.location.pathname.includes("home.html")) {
         searchImage(search, 8)
-    }else{
+    } else {
         searchImage(search, 35)
-    } 
+    }
 });
 
 
-const moreImages = document.querySelector('#moreImages')
 
-moreImages.addEventListener("click", () => {
-    window.location.href= "./gallery.html"
-})
 
 

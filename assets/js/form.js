@@ -20,7 +20,7 @@ btnLogin.addEventListener('click', () => {
         if (!found) {
             alert('Account does not exist or typing error. Try again.')
         }else{
-            window.location.href= '../../pages/home.html'
+            window.location.href= './pages/home.html'
         }
     }
 })
@@ -41,7 +41,6 @@ btnCreateAcc.addEventListener('click', () => {
         alert('Your account has been created successfully!')
     }
 
-    console.log(accounts)
 })
 
 function formValidation(email, password) {

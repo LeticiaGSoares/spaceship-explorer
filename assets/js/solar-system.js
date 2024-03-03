@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function loadNewPlanet(planetName) {
         const loadPlanet = get(`solar-system`, planetName);
+        console.log(planetName)
         loadPlanet.then((data) => {
             updatePlanetData(data);
         });
@@ -69,7 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             discoveryDate.textContent = data.discoveryDate;
         }
+        const fileName = planetsQueue[currentIndex].toLowerCase()
 
-        planetImg.src = `../assets/images/${planetsQueue[currentIndex]}.png`;
+        planetImg.src = `../assets/images/${fileName}.png`;
     }
 });

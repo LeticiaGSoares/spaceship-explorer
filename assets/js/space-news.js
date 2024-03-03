@@ -41,7 +41,6 @@ function createArticleBox(data) {
 
 function searchArticle(keyword, limit) {
     const loadArticles = get(`space-news`, `?limit=${limit}&${keyword}`);
-    console.log(isArticleOn);
 
     if (isArticleOn) {
         const articlesOn = document.querySelectorAll('.article-box');
@@ -59,6 +58,10 @@ function searchArticle(keyword, limit) {
 document.addEventListener('DOMContentLoaded', () => {
     if (document.location.pathname.includes("home.html")) {
         searchArticle("", 3);
+        const moreNews = document.querySelector('#moreNews')
+        moreNews.addEventListener('click', () => {
+            window.location.href = './news.html'
+        })        
     }else{
         searchArticle("", 15)
     }
@@ -74,9 +77,5 @@ submitBtnNews.addEventListener('click', () => {
     }
 });
 
-const moreNews = document.querySelector('#moreNews')
 
-moreNews.addEventListener('click', () => {
-    window.location.href = './news.html'
-})
 
